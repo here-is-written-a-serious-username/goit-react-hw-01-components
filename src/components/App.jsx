@@ -1,3 +1,9 @@
+
+import { UserCard } from 'components/UserCard/UserCard'
+import user from '../markupData/user'
+
+
+
 export const App = () => {
   return (
     <div
@@ -10,7 +16,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <UserCard avatar={user.avatar} />
     </div>
   );
 };
