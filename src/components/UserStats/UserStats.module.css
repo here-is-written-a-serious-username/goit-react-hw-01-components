@@ -1,0 +1,21 @@
+.stats {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.stats li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.label {
+    color: red;
+}
+
+.quantity {
+    color: blue;
+}

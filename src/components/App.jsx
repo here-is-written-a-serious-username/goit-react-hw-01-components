@@ -1,22 +1,25 @@
-
 import { UserCard } from 'components/UserCard/UserCard'
+import { UserStats } from 'components/UserStats/UserStats'
+import { UserProfile } from 'components/UserProfile/UserProfile'
 import user from '../markupData/user'
 
 
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      <UserCard avatar={user.avatar} />
-    </div>
+    <>
+      <UserProfile>
+        <UserCard
+          src={user.avatar}
+          alt='User avatar'
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+        />
+        <UserStats
+          stats={user.stats}
+        />
+      </UserProfile>
+    </>
   );
 };
