@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import css from './UserCard.module.css'
 
 export const UserCard = ({ src, alt, username, tag, location }) => {
@@ -9,4 +9,12 @@ export const UserCard = ({ src, alt, username, tag, location }) => {
             <p className={css.tag}>{tag}</p>
             <p className={css.location}>{location}</p>
         </div>)
+}
+
+UserCard.propTypes = {
+    src: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
 }

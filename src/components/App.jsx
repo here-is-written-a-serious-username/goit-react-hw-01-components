@@ -1,8 +1,10 @@
 import { UserCard } from 'components/UserCard/UserCard'
 import { UserStats } from 'components/UserStats/UserStats'
 import { UserProfile } from 'components/UserProfile/UserProfile'
-import user from '../markupData/user'
 
+import { StatisticsTitle } from 'components/StatisticsTitle/StatisticsTitle'
+import user from '../markupData/user'
+import data from '../markupData/data'
 
 
 export const App = () => {
@@ -20,6 +22,8 @@ export const App = () => {
           stats={user.stats}
         />
       </UserProfile>
+
+      <StatisticsTitle text='Upload stats' data={data} />
     </>
   );
 };
