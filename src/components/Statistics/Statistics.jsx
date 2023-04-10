@@ -4,7 +4,7 @@ import { Title, StatList, StatItem, StatItemlabel, StatItemPercent } from './Sta
 export const Statistics = ({ title, data }) => {
     return (
         <>
-            {data.length > 0 && (<Title>{data.length > 0 ? title : null}</Title>)}
+            {title && (<Title>{title}</Title>)}
             <StatList>
                 {data.map(({ id, label, percentage }) => (
                     <StatItem key={id} randomBackgrColor={getRandomHexColor()}>
@@ -19,7 +19,7 @@ export const Statistics = ({ title, data }) => {
 };
 
 Statistics.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     data: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
